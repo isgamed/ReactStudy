@@ -10,6 +10,13 @@ import './app.css';
 
 
 const App = () => {
+
+    const data = [
+        {label: 'Once uppon a time', important: true, id: 'qwe'},
+        {label: 'The King decided to gather an army', important: false, id: 'rty'},
+        {label: 'He summoned his commander to the throne room', important: false, id: 'uio'}
+    ];
+
     return (
         <div className="app">
             <AppHeader/>
@@ -17,7 +24,7 @@ const App = () => {
                 <SearchPanel/>
                 <PostStatusFilter/>
             </div>
-            <PostList/>
+            <PostList posts={data}/>
             <PostAddForm/>
         </div>
     )
